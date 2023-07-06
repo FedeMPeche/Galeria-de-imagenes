@@ -1,0 +1,61 @@
+/* Establece el estilo para el contenedor principal */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(241,238,228,1) 0%, rgba(154,6,173,1) 99%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Establece el estilo para la galería de imágenes */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agregamos esta propiedad para que las imágenes se ajusten en varias filas */
+}
+
+/* Establece el estilo para cada imagen */
+.gallery img {
+    position: relative;
+    width: 100px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: width 0.3s;
+    cursor: pointer;
+    margin: 2px rgba(154,6,173,1);
+    box-shadow: 2px 2px 2px rgba(154,6,173,1);
+
+}
+
+/* Establece el estilo al pasar el cursor sobre cada imagen */
+img:hover {
+    width: 300px;
+}
+
+.image-title {
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(154,6,173,1);
+    color: rgb(250, 247, 249);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Establece el estilo para mostrar el título al pasar el cursor sobre la imagen */
+.gallery img:hover + .image-title,
+.image-title:hover {
+    opacity: 1;
+}
+
+.image-title span {
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
